@@ -578,6 +578,51 @@ p+p{margin-top:14px}
 .modal-nota{font-size:.8rem;line-height:1.5;color:var(--texto-suave-escuro)}
 .modal-nota a{color:var(--ouro-claro)}
 @media (max-width:760px){.modal{align-items:flex-end;padding:0}.modal-caixa{max-width:none;border-radius:24px 24px 0 0;border-bottom:0;padding:30px 22px 24px}}
+/* v12: hero cabe na tela */
+.lead-depois{display:none}
+@media (min-width:901px){
+  .topo .wrap{padding-top:20px;padding-bottom:0}
+  .topo img{width:150px}
+  .hero{padding-top:8px}
+  .hero-grid{gap:48px}
+  .hero-foto .lu-box{width:min(420px,calc((100svh - 130px)*.72),100%)}
+  .hero-txt{padding:16px 0 40px}
+  .hero h1{font-size:clamp(2.3rem,min(4.6vw,8svh),4.1rem);margin-bottom:18px}
+  .hero .lead{font-size:clamp(1rem,2.6svh,1.2rem);margin-bottom:clamp(18px,3.4svh,32px)}
+  .kicker{margin-bottom:clamp(12px,2.4svh,20px)}
+  .hero::before{top:0}
+}
+@media (max-width:760px){
+  .topo .wrap{padding-top:12px;padding-bottom:0}
+  .topo img{width:120px}
+  .hero{padding-top:0;padding-bottom:40px;--fh:clamp(150px,calc(100svh - 400px),290px)}
+  .hero-foto{height:var(--fh)}
+  .hero-foto .lu-box{width:calc((var(--fh) - 12px)*.74);max-width:none;margin-top:12px}
+  .hero-txt{margin-top:-18px}
+  .kicker{font-size:.78rem;margin-bottom:12px;gap:10px}
+  .kicker::before{width:24px}
+  .kicker span{padding-left:10px}
+  .hero h1{font-size:clamp(1.8rem,8.4vw,2.35rem);line-height:1.05;margin-bottom:12px}
+  .hero .lead{margin-bottom:16px}
+  .hero .lead .lead-resto{display:none}
+  .hero .lead-depois{display:block;margin:20px 0 0}
+}
+@media (min-width:901px){
+  .hero .wrap{max-width:1280px}
+  .hero-grid{grid-template-columns:.9fr 1.1fr}
+}
+@media (min-width:901px) and (max-width:1199px){
+  .hero-grid{gap:32px}
+  .hero h1{font-size:clamp(2.1rem,min(4.4vw,7.6svh),3.4rem)}
+  .hero .lead{font-size:1rem;line-height:1.55}
+  .hero-foto{padding-left:6%}
+}
+@media (min-width:761px) and (max-width:900px){
+  .topo .wrap{padding-top:18px;padding-bottom:0}
+  .hero{padding-top:8px}
+  .hero-foto .lu-box{max-width:clamp(200px,calc((100svh - 620px)*.72),300px)}
+  .hero-grid{gap:24px}
+}
 </style>
 <!-- Meta Pixel -->
 <script>
@@ -618,12 +663,13 @@ fbq('track','PageView');
     <div class="hero-txt">
       <div class="kicker">Black Friday <span>Realize para Sempre</span></div>
       <h1><span class="volta">N</span>unca mais fique <span class="destaque">sem saber o que fazer</span> na sua vida financeira</h1>
-      <p class="lead"><b>Tudo o que eu ensino sobre dinheiro, para sempre seu e sempre atualizado.</b> Para sair do caos, quitar as dívidas, tomar melhores decisões, ganhar mais, proteger o que você tem e fazer o seu dinheiro render, seja qual for o momento da economia. E você pode fazer isso com o meu acompanhamento.</p>
+      <p class="lead"><b>Tudo o que eu ensino sobre dinheiro, para sempre seu e sempre atualizado.</b> <span class="lead-resto">Para sair do caos, quitar as dívidas, tomar melhores decisões, ganhar mais, proteger o que você tem e fazer o seu dinheiro render, seja qual for o momento da economia. E você pode fazer isso com o meu acompanhamento.</span></p>
       <div class="contador" data-contador>
         <div class="rot">A oferta termina em</div>
         <div class="digitos"><div class="dig"><b data-d>00</b><span>dias</span></div><div class="dig"><b data-h>00</b><span>horas</span></div><div class="dig"><b data-m>00</b><span>min</span></div><div class="dig"><b data-s>00</b><span>seg</span></div></div>
       </div>
       <a class="btn btn-ouro" href="#opcoes">Quero ver as opções</a>
+      <p class="lead lead-depois">Para sair do caos, quitar as dívidas, tomar melhores decisões, ganhar mais, proteger o que você tem e fazer o seu dinheiro render, seja qual for o momento da economia. E você pode fazer isso com o meu acompanhamento.</p>
 
       
     </div>
