@@ -585,7 +585,7 @@ p+p{margin-top:14px}
   .topo img{width:150px}
   .hero{padding-top:8px}
   .hero-grid{gap:48px}
-  .hero-foto .lu-box{width:min(420px,calc((100svh - 130px)*.72),100%)}
+  .hero-foto .lu-box{width:min(420px,calc((100svh - 130px)*.72),64%)}
   .hero-txt{padding:16px 0 40px}
   .hero h1{font-size:clamp(2.3rem,min(4.6vw,8svh),4.1rem);margin-bottom:18px}
   .hero .lead{font-size:clamp(1rem,2.6svh,1.2rem);margin-bottom:clamp(18px,3.4svh,32px)}
@@ -615,13 +615,70 @@ p+p{margin-top:14px}
   .hero-grid{gap:32px}
   .hero h1{font-size:clamp(2.1rem,min(4.4vw,7.6svh),3.4rem)}
   .hero .lead{font-size:1rem;line-height:1.55}
-  .hero-foto{padding-left:6%}
 }
 @media (min-width:761px) and (max-width:900px){
   .topo .wrap{padding-top:18px;padding-bottom:0}
   .hero{padding-top:8px}
   .hero-foto .lu-box{max-width:clamp(200px,calc((100svh - 620px)*.72),300px)}
   .hero-grid{gap:24px}
+}
+/* v13: duas opções claras */
+.hero .lead .lead-resto{display:none}
+.hero .lead-depois{display:block;margin:22px 0 0;font-size:1rem;max-width:560px;color:rgb(255 255 255 / .72)}
+
+.caminhos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 22px;max-width:560px}
+.cam-op{border:1px solid rgb(211 178 111 / .35);border-radius:14px;padding:11px 14px;background:rgb(255 255 255 / .03);display:flex;flex-direction:column;gap:2px}
+.cam-op.c2{border-color:var(--ouro);background:rgb(211 178 111 / .08)}
+.cam-n{font:700 .68rem/1.2 var(--texto);letter-spacing:.16em;text-transform:uppercase;color:var(--ouro)}
+.cam-op b{font:700 1rem/1.25 var(--titulo);color:#fff}
+.cam-d{font:400 .82rem/1.35 var(--texto);color:rgb(255 255 255 / .72)}
+.etq{display:inline-block;margin-left:10px;padding:5px 10px;border-radius:999px;background:var(--roxo);color:#fff;font:600 .68rem/1 var(--texto);letter-spacing:.12em}
+.etq-ouro{margin:0 10px 0 0;background:var(--ouro);color:#0C080F}
+.versoes-sec .lead .dif{color:var(--roxo);font-weight:700}
+.versao .lista li.tudo{font-weight:700;color:#fff}
+.tab-sub{color:var(--tinta-suave);margin:-6px 0 22px;max-width:640px}
+.tabela-cursos thead th.col-op{color:var(--roxo)}
+.tabela-cursos thead th.col-op span{display:block;font-weight:500;letter-spacing:.06em;color:var(--tinta-suave);margin-top:3px}
+@media (min-width:901px){.hero .lead{margin-bottom:clamp(14px,2.4svh,22px)}}
+@media (max-width:760px){
+  .hero{--fh:clamp(95px,calc(100svh - 492px),280px)}
+  .hero .kicker{display:none}
+  .hero-txt{margin-top:-26px}
+  .caminhos{gap:8px;margin-bottom:16px}
+  .cam-op{padding:9px 11px}
+    .cam-d{font-size:.74rem}
+  .hero .lead{margin-bottom:14px}
+  .so-d{display:none}
+  .cam-op b{font-size:.88rem}
+}
+/* v14 */
+@media (min-width:901px){.caminhos{max-width:620px}}
+.cam-op.c2 .cam-d{color:var(--ouro-claro);font-weight:600}
+.etq{font-size:.82rem;padding:7px 13px;letter-spacing:.1em}
+.tabela-cursos .rot .rot-s{display:block;font-weight:500;letter-spacing:.02em;text-transform:none;font-size:.95em;margin-top:1px}
+@media (max-width:760px){.etq{font-size:.74rem;padding:6px 11px}.tabela-cursos .rot{min-height:3.6em}}
+/* v15 */
+.cam-op.c2 .cam-pl{color:#fff;font-weight:500}
+.momento-tag{background:var(--roxo);color:#fff}
+.versao.claro{position:relative}
+.versao.claro::before{content:"Black Friday";position:absolute;top:-14px;right:28px;background:var(--ouro);color:#0C080F;font:700 .72rem/1 var(--texto);letter-spacing:.18em;text-transform:uppercase;padding:8px 12px;border-radius:999px}
+@media (max-width:760px){.versao.claro::before{right:20px}}
+@media (max-width:760px) and (max-height:620px){
+  .hero h1{font-size:1.68rem;margin-bottom:10px}
+  .hero .lead{font-size:.95rem;margin-bottom:12px}
+  .caminhos{margin-bottom:12px}
+  .cam-op{padding:7px 10px}
+  .hero .btn{padding-top:14px;padding-bottom:14px}
+}
+@media (min-width:901px) and (max-width:1279px){
+  .hero-foto .lu-box{width:min(420px,calc((100svh - 130px)*.72),74%)}
+  .comp-orbita .comp img:nth-of-type(1){left:-10%}
+  .comp-orbita .comp img:nth-of-type(3){left:-20%}
+  .comp-orbita .comp img:nth-of-type(5){left:-9%}
+  .comp-orbita .comp img:nth-of-type(2){left:74%}
+  .comp-orbita .comp img:nth-of-type(4){left:80%}
+  .comp-orbita .comp img:nth-of-type(6){left:74%}
+  .comp-orbita .comp img:nth-of-type(8){left:58%}
 }
 </style>
 <!-- Meta Pixel -->
@@ -663,13 +720,17 @@ fbq('track','PageView');
     <div class="hero-txt">
       <div class="kicker">Black Friday <span>Realize para Sempre</span></div>
       <h1><span class="volta">N</span>unca mais fique <span class="destaque">sem saber o que fazer</span> na sua vida financeira</h1>
-      <p class="lead"><b>Tudo o que eu ensino sobre dinheiro, para sempre seu e sempre atualizado.</b> <span class="lead-resto">Para sair do caos, quitar as dívidas, tomar melhores decisões, ganhar mais, proteger o que você tem e fazer o seu dinheiro render, seja qual for o momento da economia. E você pode fazer isso com o meu acompanhamento.</span></p>
+      <p class="lead"><b>Tudo o que eu ensino sobre dinheiro, para sempre seu e sempre atualizado.</b> <span class="lead-resto">Para sair do caos, quitar as dívidas, tomar melhores decisões, ganhar mais, proteger o que você tem e fazer o seu dinheiro render, seja qual for o momento da economia.</span></p>
       <div class="contador" data-contador>
         <div class="rot">A oferta termina em</div>
         <div class="digitos"><div class="dig"><b data-d>00</b><span>dias</span></div><div class="dig"><b data-h>00</b><span>horas</span></div><div class="dig"><b data-m>00</b><span>min</span></div><div class="dig"><b data-s>00</b><span>seg</span></div></div>
       </div>
-      <a class="btn btn-ouro" href="#opcoes">Quero ver as opções</a>
-      <p class="lead lead-depois">Para sair do caos, quitar as dívidas, tomar melhores decisões, ganhar mais, proteger o que você tem e fazer o seu dinheiro render, seja qual for o momento da economia. E você pode fazer isso com o meu acompanhamento.</p>
+      <div class="caminhos">
+        <div class="cam-op"><span class="cam-n">Opção 1</span><b>Cursos para sempre</b><span class="cam-d">você no seu ritmo</span></div>
+        <div class="cam-op c2"><span class="cam-n">Opção 2</span><b>Cursos para sempre</b><span class="cam-d">+ acompanhamento <span style="white-space:nowrap">por 1 ano</span></span><span class="cam-d cam-pl">Planner para os <span style="white-space:nowrap"><span data-planners>50</span> primeiros</span></span></div>
+      </div>
+      <a class="btn btn-ouro" href="#opcoes">Quero ver as duas opções</a>
+      <p class="lead lead-depois">Para sair do caos, quitar as dívidas, tomar melhores decisões, ganhar mais, proteger o que você tem e fazer o seu dinheiro render, seja qual for o momento da economia.</p>
 
       
     </div>
@@ -714,7 +775,7 @@ fbq('track','PageView');
 <!-- 3. OS 7 CURSOS -->
 <section class="cursos-sec" id="cursos">
   <div class="wrap">
-    <div class="sobretitulo"><svg class="simbolo"><use href="#s"/></svg>Os 8 cursos</div>
+    <div class="sobretitulo"><svg class="simbolo"><use href="#s"/></svg>Os 8 cursos <span class="etq">Nas duas opções</span></div>
     <h2><span class="volta">D</span>o caos <em>à liberdade</em></h2>
     <p class="lead">Os cursos que já transformaram a vida financeira de milhares de alunos, numa ordem pensada para você: primeiro sair do caos, depois fazer o dinheiro trabalhar, depois multiplicar. Três deles você faz em paralelo, quando fizer sentido para a sua vida.</p>
 
@@ -777,7 +838,7 @@ fbq('track','PageView');
 <!-- 6. O INTENSIVO EM DETALHE -->
 <section class="palco brilho intensivo">
   <div class="wrap">
-    <div class="sobretitulo"><svg class="simbolo"><use href="#s"/></svg>Cursos + Acompanhamento</div>
+    <div class="sobretitulo"><span class="etq etq-ouro">Só na Opção 2</span>Cursos + Acompanhamento</div>
     <h2>Dois meses intensivos, <em>um ano inteiro comigo</em></h2>
     <p class="lead">Saber o que fazer é metade do caminho. A outra metade é fazer acontecer. Na opção Cursos + Acompanhamento, você não faz isso sozinho: é aí que eu entro.</p>
 
@@ -833,11 +894,11 @@ fbq('track','PageView');
   <div class="wrap">
     <div class="sobretitulo"><svg class="simbolo"><use href="#s"/></svg>As duas opções</div>
     <h2>Escolha <em>como você quer</em> começar</h2>
-    <p class="lead">Os cursos são para sempre nas duas opções. A diferença é se você quer colocar tudo em prática com o meu acompanhamento.</p>
+    <p class="lead">Os 8 cursos são para sempre nas duas opções. <b class="dif">A única diferença é o meu acompanhamento até 30/11/2027.</b></p>
 
     <div class="versoes">
       <div class="versao claro">
-        <div class="selo"><svg class="simbolo"><use href="#s"/></svg>No seu ritmo</div>
+        <div class="selo"><svg class="simbolo"><use href="#s"/></svg>Opção 1 · No seu ritmo</div>
         <h3>Cursos</h3>
         <p class="sub">Todos os cursos para sempre, para estudar quando e como quiser.</p>
         <div class="preco"><span class="rs">R$</span>868<small>à vista</small></div>
@@ -854,13 +915,13 @@ fbq('track','PageView');
       </div>
 
       <div class="versao oferta">
-        <div class="selo"><svg class="simbolo"><use href="#s"/></svg>Comigo até novembro de 2027</div>
+        <div class="selo"><svg class="simbolo"><use href="#s"/></svg>Opção 2 · Comigo até novembro de 2027</div>
         <h3>Cursos + Acompanhamento</h3>
         <p class="sub">A virada do ano para colocar tudo em prática, comigo do lado.</p>
         <div class="preco"><span class="rs">R$</span>1.318<small>à vista</small></div>
         <div class="parc" data-parc="intensivo"></div>
         <ul class="lista">
-          <li><svg class="simbolo"><use href="#s"/></svg>Os 8 cursos, com acesso sem prazo de expiração e atualizações incluídas</li><li><svg class="simbolo"><use href="#s"/></svg>App Ponto de Partida</li><li><svg class="simbolo"><use href="#s"/></svg>Apoio às dúvidas dentro da plataforma dos cursos, até 30/11/2027</li><li><svg class="simbolo"><use href="#s"/></svg>Apoio da equipe pelo WhatsApp para acesso e orientação</li><li class="sep">E o meu acompanhamento até 30/11/2027</li><li><svg class="simbolo"><use href="#s"/></svg>4 encontros ao vivo de implementação em dezembro, com gravação</li><li><svg class="simbolo"><use href="#s"/></svg>Plantão de dúvidas no Zoom uma vez por semana, em dezembro e janeiro</li><li><svg class="simbolo"><use href="#s"/></svg>Domine Sua Agenda 2027 ao vivo em janeiro, além da versão gravada</li><li><svg class="simbolo"><use href="#s"/></svg>Encontros mensais ao vivo, de fevereiro a novembro de 2027</li><li><svg class="simbolo"><use href="#s"/></svg>Apoio e análises individuais por e-mail</li>
+          <li class="tudo"><svg class="simbolo"><use href="#s"/></svg><span>Tudo o que vem na Opção 1: os 8 cursos para sempre, App Ponto de Partida e apoio da equipe</span></li><li class="sep">E o meu acompanhamento até 30/11/2027</li><li><svg class="simbolo"><use href="#s"/></svg>4 encontros ao vivo de implementação em dezembro, com gravação</li><li><svg class="simbolo"><use href="#s"/></svg>Plantão de dúvidas no Zoom uma vez por semana, em dezembro e janeiro</li><li><svg class="simbolo"><use href="#s"/></svg>Domine Sua Agenda 2027 ao vivo em janeiro, além da versão gravada</li><li><svg class="simbolo"><use href="#s"/></svg>Encontros mensais ao vivo, de fevereiro a novembro de 2027</li><li><svg class="simbolo"><use href="#s"/></svg>Apoio e análises individuais por e-mail</li>
           <li class="ouro"><svg class="simbolo"><use href="#s"/></svg><span>Os <span data-planners>50</span> primeiros recebem o Planner 2027 em casa</span></li>
         </ul>
         <a class="btn btn-ouro" data-link="intensivo" href="#opcoes">Quero cursos + acompanhamento</a>
@@ -882,10 +943,11 @@ fbq('track','PageView');
       <p class="suave">Por isso, esta é uma oportunidade que nunca aconteceu dessa forma e que não vai se repetir assim: os cursos que já transformaram a vida de milhares de alunos, com materiais novos e atualizados, todos juntos e para sempre, pelo menor valor que já tiveram. E com o meu acompanhamento pessoal neste formato.</p>
     </div>
 
-    <h3 class="tab-titulo">Por quanto cada curso sai agora</h3>
+    <h3 class="tab-titulo">Quanto cada curso sai em cada opção</h3>
+    <p class="tab-sub">O valor de cada opção dividido pelos 8 cursos: R$ 868 na Opção 1 e R$ 1.318 na Opção 2.</p>
     <table class="tabela-cursos">
-      <thead><tr><th scope="col">Curso</th><th scope="col">Já foi vendido por</th><th scope="col">Cursos</th><th scope="col">Cursos + Acompanhamento</th></tr></thead>
-      <tbody><tr><th scope="row">Domine Suas Finanças</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>1.997</span></td><td class="agora"><span class="rot">Cursos</span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Cursos + Acompanhamento</span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Segredos dos Bancos</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>497</span></td><td class="agora"><span class="rot">Cursos</span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Cursos + Acompanhamento</span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Domine Kids</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>397</span></td><td class="agora"><span class="rot">Cursos</span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Cursos + Acompanhamento</span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Investindo Sem Medo</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>497</span></td><td class="agora"><span class="rot">Cursos</span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Cursos + Acompanhamento</span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Escalada do Investidor</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>997</span></td><td class="agora"><span class="rot">Cursos</span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Cursos + Acompanhamento</span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Aumente Seus Ganhos</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>997</span></td><td class="agora"><span class="rot">Cursos</span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Cursos + Acompanhamento</span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Domine Sua Vida: Muito Além do Domínio</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>5.000</span><small>na mentoria anual</small></td><td class="agora"><span class="rot">Cursos</span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Cursos + Acompanhamento</span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Domine Sua Agenda 2027</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>297</span></td><td class="agora"><span class="rot">Cursos</span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Cursos + Acompanhamento</span><span class="val"><span class="rs">R$</span>164,75</span></td></tr></tbody>
+      <thead><tr><th scope="col">Curso</th><th scope="col">Já foi vendido por</th><th scope="col" class="col-op">Opção 1<span>Só cursos</span></th><th scope="col" class="col-op">Opção 2<span>Cursos + acompanhamento</span></th></tr></thead>
+      <tbody><tr><th scope="row">Domine Suas Finanças</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>1.997</span></td><td class="agora"><span class="rot">Opção 1 <span class="rot-s">(só cursos)</span></span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Opção 2 <span class="rot-s">(cursos + acomp.)</span></span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Segredos dos Bancos</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>497</span></td><td class="agora"><span class="rot">Opção 1 <span class="rot-s">(só cursos)</span></span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Opção 2 <span class="rot-s">(cursos + acomp.)</span></span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Domine Kids</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>397</span></td><td class="agora"><span class="rot">Opção 1 <span class="rot-s">(só cursos)</span></span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Opção 2 <span class="rot-s">(cursos + acomp.)</span></span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Investindo Sem Medo</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>497</span></td><td class="agora"><span class="rot">Opção 1 <span class="rot-s">(só cursos)</span></span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Opção 2 <span class="rot-s">(cursos + acomp.)</span></span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Escalada do Investidor</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>997</span></td><td class="agora"><span class="rot">Opção 1 <span class="rot-s">(só cursos)</span></span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Opção 2 <span class="rot-s">(cursos + acomp.)</span></span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Aumente Seus Ganhos</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>997</span></td><td class="agora"><span class="rot">Opção 1 <span class="rot-s">(só cursos)</span></span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Opção 2 <span class="rot-s">(cursos + acomp.)</span></span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Domine Sua Vida: Muito Além do Domínio</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>5.000</span><small>na mentoria anual</small></td><td class="agora"><span class="rot">Opção 1 <span class="rot-s">(só cursos)</span></span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Opção 2 <span class="rot-s">(cursos + acomp.)</span></span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Domine Sua Agenda 2027</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>297</span></td><td class="agora"><span class="rot">Opção 1 <span class="rot-s">(só cursos)</span></span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Opção 2 <span class="rot-s">(cursos + acomp.)</span></span><span class="val"><span class="rs">R$</span>164,75</span></td></tr></tbody>
     </table>
   </div>
 </section>
