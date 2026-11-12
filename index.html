@@ -680,6 +680,29 @@ p+p{margin-top:14px}
   .comp-orbita .comp img:nth-of-type(6){left:74%}
   .comp-orbita .comp img:nth-of-type(8){left:58%}
 }
+@media (min-width:1280px){
+  .hero-foto{--lw:min(470px,calc((100svh - 120px)*.74),74%)}
+  .hero-foto .lu-box{width:var(--lw);max-width:none;margin:0 calc(var(--lw)*.19 + 10px) 0 auto}
+}
+@media (min-width:901px){
+  .hero .lead-depois{display:none}
+  .hero-txt{padding-bottom:40px}
+}
+@media (min-width:1500px){
+  .hero .wrap{max-width:1400px}
+  .hero-foto{--lw:min(540px,calc((100svh - 120px)*.74),80%)}
+}
+@media (min-width:901px) and (max-width:1279px){
+  .hero-foto .lu-box{width:min(440px,calc((100svh - 120px)*.74),80%)}
+}
+/* v16 */
+.ver-cursos{display:inline-block;margin-top:6px;padding:4px 10px;border:1px solid var(--roxo);border-radius:999px;font:600 .74rem/1.2 var(--texto);letter-spacing:.04em;color:var(--roxo);text-decoration:none;white-space:nowrap}
+.ver-cursos:hover{background:var(--roxo);color:#fff}
+.soma{display:flex;gap:16px;align-items:flex-start;margin-top:28px;background:var(--branco);border:1px solid var(--linha);border-left:3px solid var(--ouro);border-radius:16px;padding:22px 24px}
+.soma .simbolo{flex:none;width:24px;height:24px;color:var(--roxo);margin-top:3px}
+.soma p{font-size:1.08rem;color:var(--tinta);line-height:1.6}
+.soma b{color:var(--roxo);font-weight:700;white-space:nowrap}
+@media (max-width:760px){.soma{padding:18px;gap:12px}.soma p{font-size:1rem}}
 </style>
 <!-- Meta Pixel -->
 <script>
@@ -904,7 +927,7 @@ fbq('track','PageView');
         <div class="preco"><span class="rs">R$</span>868<small>à vista</small></div>
         <div class="parc" data-parc="essencial"></div>
         <ul class="lista">
-          <li><svg class="simbolo"><use href="#s"/></svg>Os 8 cursos, com acesso sem prazo de expiração e atualizações incluídas</li>
+          <li><svg class="simbolo"><use href="#s"/></svg><span>Os 8 cursos, com acesso sem prazo de expiração e atualizações incluídas <a class="ver-cursos" href="#cursos">Ver os cursos ↑</a></span></li>
           <li><svg class="simbolo"><use href="#s"/></svg>Domine Sua Agenda 2027 na versão gravada</li>
           <li><svg class="simbolo"><use href="#s"/></svg>App Ponto de Partida</li>
           <li><svg class="simbolo"><use href="#s"/></svg>Apoio às dúvidas dentro da plataforma dos cursos, até 30/11/2027</li>
@@ -949,6 +972,10 @@ fbq('track','PageView');
       <thead><tr><th scope="col">Curso</th><th scope="col">Já foi vendido por</th><th scope="col" class="col-op">Opção 1<span>Só cursos</span></th><th scope="col" class="col-op">Opção 2<span>Cursos + acompanhamento</span></th></tr></thead>
       <tbody><tr><th scope="row">Domine Suas Finanças</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>1.997</span></td><td class="agora"><span class="rot">Opção 1 <span class="rot-s">(só cursos)</span></span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Opção 2 <span class="rot-s">(cursos + acomp.)</span></span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Segredos dos Bancos</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>497</span></td><td class="agora"><span class="rot">Opção 1 <span class="rot-s">(só cursos)</span></span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Opção 2 <span class="rot-s">(cursos + acomp.)</span></span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Domine Kids</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>397</span></td><td class="agora"><span class="rot">Opção 1 <span class="rot-s">(só cursos)</span></span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Opção 2 <span class="rot-s">(cursos + acomp.)</span></span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Investindo Sem Medo</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>497</span></td><td class="agora"><span class="rot">Opção 1 <span class="rot-s">(só cursos)</span></span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Opção 2 <span class="rot-s">(cursos + acomp.)</span></span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Escalada do Investidor</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>997</span></td><td class="agora"><span class="rot">Opção 1 <span class="rot-s">(só cursos)</span></span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Opção 2 <span class="rot-s">(cursos + acomp.)</span></span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Aumente Seus Ganhos</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>997</span></td><td class="agora"><span class="rot">Opção 1 <span class="rot-s">(só cursos)</span></span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Opção 2 <span class="rot-s">(cursos + acomp.)</span></span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Domine Sua Vida: Muito Além do Domínio</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>5.000</span><small>na mentoria anual</small></td><td class="agora"><span class="rot">Opção 1 <span class="rot-s">(só cursos)</span></span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Opção 2 <span class="rot-s">(cursos + acomp.)</span></span><span class="val"><span class="rs">R$</span>164,75</span></td></tr><tr><th scope="row">Domine Sua Agenda 2027</th><td class="antes"><span class="rot">Já custou</span><span class="val"><span class="rs">R$</span>297</span></td><td class="agora"><span class="rot">Opção 1 <span class="rot-s">(só cursos)</span></span><span class="val"><span class="rs">R$</span>108,50</span></td><td class="agora"><span class="rot">Opção 2 <span class="rot-s">(cursos + acomp.)</span></span><span class="val"><span class="rs">R$</span>164,75</span></td></tr></tbody>
     </table>
+    <div class="soma">
+      <svg class="simbolo"><use href="#s"/></svg>
+      <p>Para ter acesso a todos esses conteúdos, você teria que investir <b>R$ 5.679</b>. Mas nessa Black Friday, você pode adquirir os 8 cursos para sempre por <b>R$ 868 na Opção 1</b> ou <b>R$ 1.318 na Opção 2</b>, com o meu acompanhamento até novembro de 2027.</p>
+    </div>
   </div>
 </section>
 
